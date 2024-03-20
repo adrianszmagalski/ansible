@@ -9,6 +9,7 @@
       when: ansible_distribution == "CentOS"
 
     - name: install updates (Ubuntu) 
+      tags: always
       apt:
         upgrade: dist
         update_cache: yes
@@ -19,6 +20,7 @@
     tasks: 
 
     - name: install apache and php for Ubuntu servers
+      tags: apache,apache2,ubuntu
       apt:
         name:
           - apache2
@@ -41,6 +43,7 @@
     tasks: 
 
     - name: install MySQL server
+      tags: mysql
       apt: 
         name: mysql-server
         state: latest
