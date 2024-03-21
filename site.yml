@@ -7,7 +7,9 @@
       apt:
         upgrade: dist
         update_cache: yes
+      changed_when: false
       when: ansible_distribution == "Ubuntu"
+
 
 ###  WEB SERVER ####
 
@@ -46,9 +48,7 @@
         name: apache2
         state: restarted
       when: apache2.changed
-        
-        
-    
+         
 
     - name: copy html file to /var/www/html
       tags: html, file
