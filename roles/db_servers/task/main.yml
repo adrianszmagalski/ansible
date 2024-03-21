@@ -1,0 +1,6 @@
+    - name: install MySQL server
+      tags: mysql
+      apt: 
+        name: mysql-server
+        state: latest
+        update_cache: yes

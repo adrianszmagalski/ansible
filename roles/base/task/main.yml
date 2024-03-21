@@ -1,0 +1,12 @@
+   -  name: add ssh key for user simone
+      tags: always
+      ansible.posix.authorized_key:
+        user: simone
+        key: "ssh-ed25519"
+   
+   - name: install htop
+     tags: htop
+     apt:
+      name: htop
+      status: latest
+      update_cache: yes

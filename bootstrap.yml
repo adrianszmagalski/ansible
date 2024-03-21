@@ -30,8 +30,4 @@
         group: root
         mode: 0440
 
-    - name: add ssh key for user simone
-      tags: always
-      ansible.posix.authorized_key:
-        user: simone
-        key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJwaJoL//uwPV/XOJsmsvakHyHMfBFOVs0ehHA0+Onqv ansible"
+    
